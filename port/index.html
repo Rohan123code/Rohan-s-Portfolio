@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rohan's - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/port/style/style.css">
+  <!-- 
+<style>
+:root{
+  --primary:#00f6ff;
+  --dark:#081b29;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(120deg,#06131f,#020b13);
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.2);
+  backdrop-filter:blur(10px);
+  z-index:100;
+}
+
+header h2{
+  color:var(--primary);
+}
+
+nav a{
+  margin-left:25px;
+  color:white;
+  text-decoration:none;
+  font-size:15px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--primary);
+  transform:scale(1.05);
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 10%;
+  gap:60px;
+}
+
+.hero-text{
+  max-width:520px;
+}
+
+.hero-text h4{
+  font-size:20px;
+  color:#cfefff;
+}
+
+.hero-text h1{
+  font-size:46px;
+  margin:10px 0;
+}
+
+.hero-text h1 span{
+  color:var(--primary);
+}
+
+.hero-text h3{
+  font-size:24px;
+}
+
+.hero-text p{
+  margin:20px 0;
+  color:#b9e6ff;
+  line-height:1.6;
+}
+
+.socials a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:40px;
+  height:40px;
+  border:2px solid var(--primary);
+  border-radius:50%;
+  color:var(--primary);
+  margin-right:10px;
+  transition:.4s;
+}
+
+.socials a:hover{
+  background:var(--primary);
+  color:#000;
+  box-shadow:0 0 20px var(--primary), 0 0 40px var(--primary);
+  transform:scale(1.1);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 30px;
+  background:var(--primary);
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 0 30px var(--primary);
+  transition:.3s;
+}
+
+.btn:hover{
+  box-shadow:0 0 50px var(--primary), 0 0 30px var(--primary) inset;
+  transform:translateY(-3px) scale(1.05);
+}
+
+/* HERO CIRCLE */
+.hero-visual{
+  position:relative;
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  inset:-12px;
+  border-radius:50%;
+  background:conic-gradient(
+    var(--primary),
+    #6a5cff,
+    var(--primary)
+  );
+  animation:spin 6s linear infinite;
+}
+
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:20px;
+  border-radius:50%;
+  background:#081b29;
+  box-shadow:0 0 60px rgba(0,246,255,.6);
+}
+
+.hero-visual img.hero-pic {
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  object-fit:cover;
+  z-index:1;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
+
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+/* ABOUT SECTION */
+.about{
+  min-height:100vh;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  padding:120px 10%;
+  gap:50px;
+}
+
+.about-text{
+  max-width:700px;
+  opacity:0;
+  transform:translateX(-50px);
+  animation:fadeInLeft 1s forwards;
+}
+
+.about-text h2{
+  font-size:36px;
+  color:var(--primary);
+  margin-bottom:20px;
+}
+
+.about-text p{
+  margin-bottom:20px;
+  color:#b9e6ff;
+  line-height:1.6;
+}
+
+.about-text ul{
+  margin:15px 0;
+  padding-left:20px;
+}
+
+.about-text ul li{
+  margin-bottom:10px;
+  color:#cfefff;
+}
+
+@keyframes fadeInLeft{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@media(max-width:900px){
+  .about{
+    padding:120px 5%;
+    flex-direction:column;
+  }
+}
+
+/* PROJECTS SECTION */
+.projects{
+  min-height:100vh;
+  padding:120px 10%;
+}
+
+.project-card{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  margin-bottom:60px;
+  padding:25px;
+  border-radius:15px;
+  background:rgba(0,246,255,0.05);
+  box-shadow:0 0 20px rgba(0,246,255,0.3);
+  opacity:0;
+  transform:translateY(50px);
+  animation:fadeInUp 1s forwards;
+  transition:.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-5px) scale(1.02);
+  box-shadow:0 0 40px rgba(0,246,255,0.5), 0 0 60px rgba(0,246,255,0.3);
+}
+
+.project-card img{
+  width:100%;
+  max-width:600px;
+  border-radius:15px;
+  box-shadow:0 0 30px rgba(0,246,255,0.5);
+}
+
+.project-card h3{
+  font-size:28px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.project-card h4{
+  font-size:20px;
+  color:#b9e6ff;
+  margin-bottom:5px;
+}
+
+.project-card p{
+  color:#cfefff;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.project-card ul{
+  display:flex;
+  flex-wrap:wrap;
+  list-style:none;
+  padding:0;
+  margin-bottom:10px;
+}
+
+.project-card ul li{
+  background:rgba(0,246,255,0.1);
+  color:var(--primary);
+  padding:5px 12px;
+  border-radius:20px;
+  margin-right:10px;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+@keyframes fadeInUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:900px){
+  .projects{
+    padding:120px 5%;
+  }
+
+  .project-card img{
+    width:100%;
+  }
+}
+
+/* CONTACT SECTION */
+.contact{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  padding:120px 10%;
+  gap:30px;
+}
+
+.contact h1{
+  font-size:42px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.contact h2{
+  font-size:36px;
+  color:#cfefff;
+  margin-bottom:20px;
+}
+
+.contact p{
+  font-size:18px;
+  color:#b9e6ff;
+  line-height:1.6;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:.3s;
+}
+
+.contact p:hover{
+  color:var(--primary);
+}
+
+.contact i{
+  color:var(--primary);
+  font-size:20px;
+}
+
+.contact .socials{
+  display:flex;
+  gap:15px;
+  margin-top:10px;
+}
+
+.contact .socials a{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:40px;
+  height:40px;
+  border:2px solid var(--primary);
+  border-radius:50%;
+  color:var(--primary);
+  text-decoration:none;
+  transition:.3s;
+}
+
+.contact .socials a:hover{
+  background:var(--primary);
+  color:#000;
+  box-shadow:0 0 20px var(--primary),0 0 40px var(--primary);
+  transform:scale(1.1);
+}
+
+@media(max-width:900px){
+  .contact{
+    padding:120px 5%;
+  }
+}
+</style> -->
+</head>
+
+<body>
+
+  <header>
+    <h2>Rohan Fasate</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h4>Hello, It's Me</h4>
+      <h1>Rohan <span>Fasate</span></h1>
+      <h3>And I'm a <span id="typing"></span></h3>
+      <p>I'm a web developer with experience in creating modern, animated and responsive websites.</p>
+      <div class="socials">
+        <!-- <a href="https://www.instagram.com/yashFasate/" target="_blank"><i class="fab fa-instagram"></i></a> -->
+        <a href="https://www.linkedin.com/in/rohan-fasate-9a93aa32a/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Rohan123code" target="_blank">GitHub</a>
+      </div>
+      <a href="About.html" class="btn">More About Me</a>
+    </div>
+
+    <div class="hero-visual">
+      <img src="/port/public/profile pic 2.jpg" alt="Rohan Fasate" class="hero-pic">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2>Know Me Better</h2>
+      <p>I am currently pursuing my second year in Computer Science and Engineering at <strong>Jhulelal Institute of
+          Technology, Loanara, Nagpur</strong>. I am a passionate learner with a strong curiosity for new technologies
+        and programming. I pride myself on being a <strong>good communicator</strong> and a team player, always eager to
+        collaborate and bring creative ideas to life. I thrive on challenges, enjoy solving problems, and strive to grow
+        every day as a <strong>web developer and innovator</strong>.</p>
+      <h3>Skills & Expertise:</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript, React</li>
+        <li>Node.js, MongoDB</li>
+        <li>Git, GitHub, Postman, VS Code</li>
+      </ul>
+      <h3>Project Highlight:</h3>
+      <p>I developed a <strong>Kindergarten School Website</strong> that addresses a real-world problem by reducing the
+        communication gap between teachers, students, and parents. You can check it out here: <a
+          href="https://yashFasate.github.io/KINDERGARDEN-LONARA/" target="_blank"
+          style="color:var(--primary);">Kindergarten Website</a></p>
+      <a href="Contact.html" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <h1>My Projects</h1>
+    <br>
+    <div class="project-card">
+      <img src="/port/public/kindergarden school.png" alt="Kindergarten Website Screenshot">
+      <div class="project-info">
+        <h3>Kindergarten School Website</h3>
+        <h4>Description / Problem Solved:</h4>
+        <p>This website is designed to reduce the communication gap between teachers, students, and parents. It allows
+          teachers to share updates, assignments, and announcements, while parents can monitor their child’s progress
+          and stay connected with school activities.</p>
+        <h4>Technologies Used:</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+        </ul>
+        <h4>Live Project Link:</h4>
+        <p><a href="https://yashsawalakhe.github.io/KINDERGARDEN-LONARA/" target="_blank"
+            style="color:var(--primary);">KINDERGARDEN-LONARA</a></p>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <section class="projects" id="projects">
+    <div class="project-card">
+      <img src="/port/public/ecommerce.png" alt="Laptop & Electronics E-Commerce Website Screenshot">
+      <div class="project-info">
+        <h3>Laptop & Electronics E-Commerce Website</h3>
+        <h4>Description / Problem Solved:</h4>
+        <p>This website is a modern e-commerce platform for laptops and electronic products, built to provide a fast,
+          responsive, and user-friendly shopping experience. It helps customers easily browse products, view detailed
+          specifications, and manage their accounts, while enabling admins to efficiently manage products and users.
+          The project addresses real-world challenges such as poor UI consistency,
+          lack of responsiveness, and inefficient product management.</p>
+        <h4>Technologies Used:</h4>
+        <ul>
+          <li>React</li>
+          <li>Tailwind CSS</li>
+          <li>JavaScript</li>
+          <li>Express.js</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+        </ul>
+        <h4>Live Project Link:</h4>
+        <p><a href="https://n-frontend.vercel.app/" target="_blank" style="color:var(--primary);">E-Commerce Website</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h1>Rohan Fasate</h1>
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-envelope"></i> Email: rohanfasate2007@gmail.com</p>
+    <p><i class="fas fa-phone"></i> Phone: +91 7058456148</p>
+    <p><i class="fas fa-map-marker-alt"></i> Location: Nagpur,Maharashtra,India</p>
+    <p>Feel free to reach out through email or phone. I’ll get back to you as soon as possible.</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/rohan-fasate-9a93aa32a/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Rohan123code" target="_blank">GitHub</a>
+      <!-- <a href="https://www.instagram.com/yashFasate/" target="_blank"><i class="fab fa-instagram"></i></a> -->
+    </div>
+  </section>
+
+  <script>
+    /* Typing effect */
+    const words = ["Frontend Developer", "Web Designer", "UI Developer", "MERN Stack Developer", "Tech Enthusiast", "Problem Solver",];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    const el = document.getElementById("typing");
+
+    function type() {
+      if (i < words.length) {
+        if (!isDeleting && j <= words[i].length) {
+          current = words[i].slice(0, j++);
+        } else if (isDeleting && j >= 0) {
+          current = words[i].slice(0, j--);
+        }
+        el.textContent = current;
+        if (j === words[i].length) isDeleting = true;
+        if (isDeleting && j === 0) {
+          isDeleting = false;
+          i++;
+        }
+      } else {
+        i = 0;
+      }
+      setTimeout(type, 120);
+    }
+    type();
+  </script>
+  <footer>
+    <p> 2024 Rohan Fasate. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
